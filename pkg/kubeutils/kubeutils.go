@@ -163,6 +163,7 @@ func deletePVC(pvc *v1.PersistentVolumeClaim) error {
 	if err != nil {
 		return err
 	}
+	time.Sleep(3000)
 	klog.Infof("delete pvc: %s/%s", pvc.Namespace, pvc.Name)
 	return nil
 
